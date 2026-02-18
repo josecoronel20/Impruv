@@ -6,7 +6,7 @@ import { WebDesignProcess } from "./components/web-design-process"
 import { WebDesignIntegration } from "./components/web-design-integration"
 
 export const metadata = {
-  title: "Diseño Web Orientado a Conversión | Advance Marketing",
+  title: "Diseño Web Orientado a Conversión | impruv Marketing",
   description:
     "Sitios web diseñados para convertir visitas en consultas comerciales. No solo se ven bien, guían al usuario hasta la acción.",
 }

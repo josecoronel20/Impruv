@@ -4,9 +4,8 @@ import { Logo } from "@/components/common/logo"
 export function Footer() {
   const links = [
     {label: "Inicio", href: "/"},
-    {label: "Metodología", href: "/metodologia"},
-    {label: "Google Ads", href: "/servicios/google-ads"},
-    {label: "Diseño Web", href: "/servicios/diseno-web"},
+    {label: "Google Ads", href: "/google-ads"},
+    {label: "Diseño Web", href: "/diseno-web"},
     {label: "Contacto", href: "/contacto"},
   ]
 
@@ -17,7 +16,7 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <Logo />
             <p className="text-sm text-muted-foreground max-w-xs">
-              Agencia de Performance Marketing especializada en generar oportunidades B2B reales.
+              Agencia de Marketing especializada en Google Ads orientada a generar clientes calificados.
             </p>
           </div>
 
@@ -45,7 +44,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-border/40">
           <p className="text-sm text-muted-foreground text-center">
-            © {new Date().getFullYear()} Advance. Todos los derechos reservados.
+            © {new Date().getFullYear()} impruv Marketing. Todos los derechos reservados.
           </p>
         </div>
       </div>

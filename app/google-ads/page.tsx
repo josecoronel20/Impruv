@@ -6,7 +6,7 @@ import { GoogleAdsProcess } from "./components/google-ads-process"
 import { GoogleAdsIntegration } from "./components/google-ads-integration"
 
 export const metadata = {
-  title: "Google Ads Orientado a Calidad | Advance Marketing",
+  title: "Google Ads Orientado a Calidad | impruv Marketing",
   description:
     "Servicio de Google Ads enfocado en generar consultas de calidad. Diseñamos estrategias para conectarte con tus clientes ideales.",
 }

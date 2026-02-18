@@ -49,10 +49,13 @@ function SheetContent({
   children,
   side = "right",
   showCloseButton = true,
+  title,
   ...props
 }: React.ComponentProps<typeof SheetPrimitive.Content> & {
   side?: "top" | "right" | "bottom" | "left"
   showCloseButton?: boolean
+  /** Accessible title for screen readers. Use a short label (e.g. "Menú de navegación"). If omitted, a default is used. */
+  title?: string
 }) {
   return (
     <SheetPortal>
@@ -73,6 +76,9 @@ function SheetContent({
         )}
         {...props}
       >
+        <SheetPrimitive.Title className="sr-only">
+          {title ?? "Panel"}
+        </SheetPrimitive.Title>
         {children}
         {showCloseButton && (
           <SheetPrimitive.Close className="ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none">

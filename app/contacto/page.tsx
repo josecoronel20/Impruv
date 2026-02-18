@@ -1,5 +1,5 @@
 
-import { ContactForm } from "@/components/contact-form"
+import { ContactForm } from "@/components/contact/contact-form"
 
 export default function ContactoPage() {
   return (

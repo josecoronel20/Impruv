@@ -127,6 +127,7 @@ function MobileNav({
         <SheetContent
           side="right"
           showCloseButton
+          title="Menú de navegación"
           className="w-[min(100vw-2rem,320px)] border-neutral-200/60 bg-neutral-50/95 backdrop-blur-md rounded-l-3xl p-0 gap-0 [&>button]:top-4 [&>button]:right-4 [&>button]:size-8 [&>button]:text-neutral-600 [&>button]:hover:text-primary"
         >
           <nav className="flex flex-col pt-14 pb-6 px-0">

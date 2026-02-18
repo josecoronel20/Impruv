@@ -55,12 +55,12 @@ export function ProcessSection() {
             </p>
             <div className="flex justify-center gap-4">
               <Button asChild>
-                <Link href="/como-trabajamos/diseno-web" className="text-primary font-medium hover:underline">
+                <Link href="/diseno-web" className="text-primary font-medium hover:underline">
                   Sitio web
                 </Link>
               </Button>
               <Button asChild>
-                <Link href="/como-trabajamos/google-ads" className="text-primary font-medium hover:underline">
+                <Link href="/google-ads" className="text-primary font-medium hover:underline">
                   Google Ads
                 </Link>
               </Button>
