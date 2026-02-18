@@ -1,0 +1,54 @@
+import Link from "next/link"
+import { Logo } from "@/components/common/logo"
+
+export function Footer() {
+  const links = [
+    {label: "Inicio", href: "/"},
+    {label: "Metodología", href: "/metodologia"},
+    {label: "Google Ads", href: "/servicios/google-ads"},
+    {label: "Diseño Web", href: "/servicios/diseno-web"},
+    {label: "Contacto", href: "/contacto"},
+  ]
+
+  return (
+    <footer className="border-t border-border/40 bg-muted/20 py-12 px-6">
+      <div className="container mx-auto max-w-6xl">
+        <div className="flex flex-col md:flex-row justify-between gap-8">
+          <div className="flex flex-col gap-4">
+            <Logo />
+            <p className="text-sm text-muted-foreground max-w-xs">
+              Agencia de Performance Marketing especializada en generar oportunidades B2B reales.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-8">
+            <div className="flex flex-col gap-3">
+              <h4 className="font-semibold text-sm">Navegación</h4>
+             <ul> {links.map((link) => (
+              <li key={link.href}>
+                <Link href={link.href} className="text-sm text-muted-foreground hover:text-foreground transition-colors">{link.label}</Link>
+              </li>
+             ))} </ul>
+            </div>
+
+            <div className="flex flex-col gap-3">
+              <h4 className="font-semibold text-sm">Legal</h4>
+              <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Privacidad
+              </a>
+              <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Términos
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-12 pt-8 border-t border-border/40">
+          <p className="text-sm text-muted-foreground text-center">
+            © {new Date().getFullYear()} Advance. Todos los derechos reservados.
+          </p>
+        </div>
+      </div>
+    </footer>
+  )
+}
