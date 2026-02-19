@@ -1,15 +1,15 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
 } from "@/components/ui/sheet";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "./logo";
+import { PrincipalBtn } from "./PrincipalBtn";
 
 // Centralizar datos de navegación
 type NavItem = {
@@ -75,11 +75,7 @@ function DesktopNav({
         ))}
 
 
-        <Link href="/contacto">
-          <Button className="rounded-full h-9 px-5 text-sm bg-primary hover:bg-primary/90 text-white">
-            Contacto
-          </Button>
-        </Link>
+        <PrincipalBtn size="default" href="/contacto" label="Contactanos" />
       </nav>
     </div>
   );
@@ -130,7 +126,8 @@ function MobileNav({
           title="Menú de navegación"
           className="w-[min(100vw-2rem,320px)] border-neutral-200/60 bg-neutral-50/95 backdrop-blur-md rounded-l-3xl p-0 gap-0 [&>button]:top-4 [&>button]:right-4 [&>button]:size-8 [&>button]:text-neutral-600 [&>button]:hover:text-primary"
         >
-          <nav className="flex flex-col pt-14 pb-6 px-0">
+          <nav className="flex flex-col justify-between h-full pb-6 pt-16 px-4 ">
+            <div className="flex flex-col gap-2">
             {navigationItems.map((item: NavItem) => (
               <Link
                 key={item.href}
@@ -140,19 +137,11 @@ function MobileNav({
               >
                 {item.label}
               </Link>
-            ))}
+            ))}</div>
 
             
-
-            <Link
-              href="/contacto"
-              onClick={handleLinkClick}
-              className="mx-4 mt-4"
-            >
-              <Button className="w-full rounded-full h-9 px-5 text-sm bg-primary hover:bg-primary/90 text-white">
-                Contacto
-              </Button>
-            </Link>
+<div className="mx-auto">
+            <PrincipalBtn size="default" href="/contacto" label="Contactanos" /></div>
           </nav>
         </SheetContent>
       </Sheet>

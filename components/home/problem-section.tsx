@@ -1,17 +1,18 @@
 import { AlertCircle } from "lucide-react"
+import { ScrollReveal } from "../common/ScrollReveal"
 
 export function ProblemSection() {
   return (
     <section className="py-40 px-6 bg-muted/30">
+           <ScrollReveal direction="up" delay={0}>
       <div className="container mx-auto max-w-5xl">
         <div className="flex flex-col gap-20">
           <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-balance mb-6 leading-[1.3]">
+             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-balance mb-6 leading-[1.3]">
               Muchas empresas invierten en publicidad, pero no consiguen clientes reales
             </h2>
-            
           </div>
-
+            
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
               "Publicidad que atrae visitas, pero no consultas reales.",
@@ -24,6 +25,7 @@ export function ProblemSection() {
               </div>
             ))}
           </div>
+
 
           <div className="text-center max-w-2xl mx-auto">
             
@@ -38,8 +40,11 @@ export function ProblemSection() {
               .
             </p>
           </div>
+
+
         </div>
       </div>
+          </ScrollReveal>
     </section>
   )
 }

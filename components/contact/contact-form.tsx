@@ -74,7 +74,7 @@ export function ContactForm() {
           {/* Nombre completo */}
           <div className="space-y-3">
             <Label htmlFor="nombre" className="text-sm font-medium text-primary">
-              Nombre completo
+              Nombre completo <span className="text-red-500">*</span>
             </Label>
             <Input
               id="nombre"
@@ -105,7 +105,7 @@ export function ContactForm() {
           {/* Teléfono */}
           <div className="space-y-3">
             <Label htmlFor="telefono" className="text-sm font-medium text-primary">
-              Teléfono
+              Teléfono <span className="text-red-500">*</span>
             </Label>
             <Input
               id="telefono"
@@ -121,7 +121,7 @@ export function ContactForm() {
           {/* Empresa */}
           <div className="space-y-3">
             <Label htmlFor="empresa" className="text-sm font-medium text-primary">
-              Empresa / Proyecto
+              Empresa / Proyecto <span className="text-red-500">*</span>
             </Label>
             <Input
               id="empresa"
@@ -159,7 +159,7 @@ export function ContactForm() {
           {/* Presupuesto */}
           <div className="space-y-3">
             <Label htmlFor="presupuesto" className="text-sm font-medium text-primary">
-              Presupuesto mensual estimado
+              Presupuesto mensual estimado <span className="text-red-500">*</span>
             </Label>
             <input type="hidden" name="presupuesto" value={budget ?? ""} />
             <Select value={budget} onValueChange={setBudget} required>
@@ -197,7 +197,7 @@ export function ContactForm() {
             <Button
               type="submit"
               disabled={status === "loading"}
-              className="w-full h-12 rounded-full bg-primary hover:bg-primary/90 text-white text-sm font-medium"
+              className="w-full h-12 rounded-full bg-gradient-to-r from-[#2B2B2B] to-[#1E73BE] hover:bg-primary/90 text-white text-sm font-medium"
             >
               {status === "loading" ? "Enviando..." : "Solicitar diagnóstico"}
             </Button>

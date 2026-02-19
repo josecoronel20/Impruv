@@ -1,8 +1,14 @@
-export function Logo({ className }: { className?: string }) {
+interface LogoProps {
+  size?: "header" | "hero"
+}
+
+export function Logo({ size = "header" }: LogoProps) {
+
+  const className = size === "header" ? "text-2xl tracking-tight" :  "text-5xl tracking-tight lg:text-6xl" ;
   return (
-    <div className={className}>
+    <div>
       <span 
-        className="text-2xl tracking-tight "
+        className={className}
         style={{ 
           fontFamily: '"Plus Jakarta Sans", sans-serif',
           fontWeight: 1000,

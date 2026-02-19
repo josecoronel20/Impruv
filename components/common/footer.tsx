@@ -16,7 +16,7 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <Logo />
             <p className="text-sm text-muted-foreground max-w-xs">
-              Agencia de Marketing especializada en Google Ads orientada a generar clientes calificados.
+              Agencia de Marketing especializada en Google Ads.
             </p>
           </div>
 
@@ -32,12 +32,12 @@ export function Footer() {
 
             <div className="flex flex-col gap-3">
               <h4 className="font-semibold text-sm">Legal</h4>
-              <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link href="/privacidad" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Privacidad
-              </a>
-              <a href="#" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                Términos
-              </a>
+              </Link>
+              <Link href="terminos-y-condiciones" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                Términos y condiciones
+              </Link>
             </div>
           </div>
         </div>

@@ -1,5 +1,6 @@
 import Link from "next/link"
 import { Button } from "../ui/button"
+import { ScrollReveal } from "../common/ScrollReveal"
 
 const steps = [
   {
@@ -28,6 +29,7 @@ const steps = [
 export function ProcessSection() {
   return (
     <section className="py-40 px-6 bg-muted/30">
+    <ScrollReveal direction="up" delay={0}>
       <div className="container mx-auto max-w-5xl">
         <div className="flex flex-col gap-20">
         <h2 className="text-3xl text-center md:text-4xl font-bold tracking-tight text-balance mb-6 leading-[1.3]">
@@ -54,12 +56,12 @@ export function ProcessSection() {
               Profundiza en cada parte del sistema:
             </p>
             <div className="flex justify-center gap-4">
-              <Button asChild>
+              <Button asChild variant="ghost">
                 <Link href="/diseno-web" className="text-primary font-medium hover:underline">
                   Sitio web
                 </Link>
               </Button>
-              <Button asChild>
+              <Button asChild variant="ghost">
                 <Link href="/google-ads" className="text-primary font-medium hover:underline">
                   Google Ads
                 </Link>
@@ -68,6 +70,7 @@ export function ProcessSection() {
           </div>
         </div>
       </div>
+      </ScrollReveal>
     </section>
   )
 }
