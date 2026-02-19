@@ -5,17 +5,66 @@ import { ServiceProcess } from "@/components/services-sections/service-process"
 import { ServiceIntegration } from "@/components/services-sections/service-integration"
 import { Target, Megaphone, MousePointerClick, TrendingUp } from "lucide-react"
 
-export const metadata = {
+import type { Metadata } from "next"
+import { ProfessionalServiceSchema } from "@/components/common/SchemaMarkup"
+
+export const metadata: Metadata = {
   title: "Google Ads Orientado a Calidad | impruv Marketing",
   description:
     "Servicio de Google Ads enfocado en generar consultas de calidad. Diseñamos estrategias para conectarte con tus clientes ideales.",
+  keywords: [
+    "Google Ads",
+    "publicidad Google",
+    "anuncios Google",
+    "SEM",
+    "marketing digital",
+    "publicidad online",
+    "Google Ads Argentina",
+    "gestión Google Ads",
+  ],
+  alternates: {
+    canonical: "/google-ads",
+  },
+  openGraph: {
+    title: "Google Ads Orientado a Calidad | impruv Marketing",
+    description:
+      "Servicio de Google Ads enfocado en generar consultas de calidad. Diseñamos estrategias para conectarte con tus clientes ideales.",
+    url: "https://impruv.com/google-ads",
+    siteName: "impruv Marketing",
+    locale: "es_AR",
+    type: "website",
+    images: [
+      {
+        url: "https://impruv.com/images/og-google-ads.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Google Ads Orientado a Calidad - impruv Marketing",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Google Ads Orientado a Calidad | impruv Marketing",
+    description: "Servicio de Google Ads enfocado en generar consultas de calidad.",
+    images: ["https://impruv.com/images/og-google-ads.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function GoogleAdsPage() {
   return (
-    <main className="min-h-screen">
+    <>
+      <ProfessionalServiceSchema
+        serviceType="Google Ads"
+        description="Servicio de Google Ads enfocado en generar consultas de calidad. Diseñamos estrategias para conectarte con tus clientes ideales."
+      />
+      <main className="min-h-screen">
       <ServiceHero
         backgroundImage="/images/bgSections/GA-hero.jpg"
+        alt="Hero section de Google Ads orientado a calidad"
         title={
           <>
             Google Ads orientado a <span className="text-primary">calidad</span>, no solo a volumen
@@ -38,7 +87,8 @@ export default function GoogleAdsPage() {
         }
       />
       <ServiceSolution
-        backgroundImage="/images/bgSections/home-hero.png"
+        backgroundImage="/images/bgSections/Home-hero.png"
+        alt="Solución de Google Ads enfocada en generar contactos reales"
         title="Estructura enfocada en generar contactos reales"
   description={
     <>
@@ -82,11 +132,13 @@ export default function GoogleAdsPage() {
       />
       <ServiceIntegration
         backgroundImage="/images/bgSections/metodologia-sitio+GA.jpg"
+        alt="Integración de Google Ads con diseño web"
         title="Google Ads sin un sitio que convierta es inversión desperdiciada"
         description="Las campañas de Google Ads cobran sentido cuando llevan a usuarios calificados a un sitio diseñado para convertir. El anuncio atrae, el sitio convence y guía hacia el contacto."
-        ctaText="Ver cómo trabajamos Diseño Web"
+        ctaText="Ver Diseño Web"
         ctaHref="/diseno-web"
       />
     </main>
+    </>
   )
 }

@@ -6,7 +6,7 @@ import { ScrollReveal } from "../common/ScrollReveal"
 export function CtaSection() {
 
   return (
-    <ParallaxSection image="/images/bgSections/Home-cta-section.png">
+    <ParallaxSection image="/images/bgSections/Home-cta-section.png" alt="Call to action - Solicitar diagnóstico gratuito de marketing digital">
 
         <ScrollReveal direction="up" delay={0}>
         <div className="relative overflow-hidden rounded-3xl bg-card border border-border p-12 md:p-16">

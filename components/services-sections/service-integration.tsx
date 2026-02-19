@@ -8,6 +8,7 @@ interface ServiceIntegrationProps {
   description: string
   ctaText: string
   ctaHref: string
+  alt?: string
 }
 
 export function ServiceIntegration({
@@ -16,9 +17,10 @@ export function ServiceIntegration({
   description,
   ctaText,
   ctaHref,
+  alt,
 }: ServiceIntegrationProps) {
   return (
-    <ParallaxSection image={backgroundImage}>
+    <ParallaxSection image={backgroundImage} alt={alt}>
      
       
       <div className="container relative mx-auto max-w-4xl">

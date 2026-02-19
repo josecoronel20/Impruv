@@ -1,7 +1,30 @@
-export const metadata = {
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
   title: "Términos y Condiciones | impruv Marketing",
   description:
     "Términos y condiciones de uso de los servicios de impruv Marketing. Lee nuestros términos antes de utilizar nuestros servicios.",
+  alternates: {
+    canonical: "/terminos-y-condiciones",
+  },
+  openGraph: {
+    title: "Términos y Condiciones | impruv Marketing",
+    description:
+      "Términos y condiciones de uso de los servicios de impruv Marketing. Lee nuestros términos antes de utilizar nuestros servicios.",
+    url: "https://impruv.com/terminos-y-condiciones",
+    siteName: "impruv Marketing",
+    locale: "es_AR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Términos y Condiciones | impruv Marketing",
+    description: "Términos y condiciones de uso de los servicios de impruv Marketing.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function TerminosYCondicionesPage() {

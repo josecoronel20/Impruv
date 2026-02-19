@@ -5,15 +5,17 @@ interface ServiceSolutionProps {
   backgroundImage: string
   title: string
   description: React.ReactNode
+  alt?: string
 }
 
 export function ServiceSolution({
   backgroundImage,
   title,
   description,
+  alt,
 }: ServiceSolutionProps) {
   return (
-    <ParallaxSection image={backgroundImage}>
+    <ParallaxSection image={backgroundImage} alt={alt}>
       <ScrollReveal direction="up" delay={0}>
       <div className="flex flex-col gap-20">
         <div className="text-center max-w-3xl mx-auto">

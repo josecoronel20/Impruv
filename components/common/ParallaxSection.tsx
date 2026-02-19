@@ -3,14 +3,18 @@ import type React from "react"
 export function ParallaxSection({
   image,
   children,
+  alt,
 }: {
   image: string
   children: React.ReactNode
+  alt?: string
 }) {
   return (
     <section className="relative overflow-hidden bg-background pt-48 pb-40 px-6">
       <div
         className="absolute inset-0 pointer-events-none"
+        role="img"
+        aria-label={alt || "Imagen de fondo decorativa"}
         style={{
           backgroundImage: `url(${image})`,
           backgroundSize: "cover",

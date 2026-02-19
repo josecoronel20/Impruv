@@ -1,7 +1,30 @@
-export const metadata = {
+import type { Metadata } from "next"
+
+export const metadata: Metadata = {
   title: "Política de Privacidad | impruv Marketing",
   description:
     "Política de privacidad de impruv Marketing. Información sobre cómo recopilamos, usamos y protegemos tus datos personales.",
+  alternates: {
+    canonical: "/privacidad",
+  },
+  openGraph: {
+    title: "Política de Privacidad | impruv Marketing",
+    description:
+      "Política de privacidad de impruv Marketing. Información sobre cómo recopilamos, usamos y protegemos tus datos personales.",
+    url: "https://impruv.com/privacidad",
+    siteName: "impruv Marketing",
+    locale: "es_AR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary",
+    title: "Política de Privacidad | impruv Marketing",
+    description: "Política de privacidad de impruv Marketing.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function PrivacidadPage() {

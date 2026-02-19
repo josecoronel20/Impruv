@@ -7,7 +7,7 @@ import { PrincipalBtn } from "../common/PrincipalBtn"
 
 export function HeroSection() {
   return (
-    <ParallaxSection image="/images/bgSections/Home-hero.png">
+    <ParallaxSection image="/images/bgSections/Home-hero.png" alt="Hero section de impruv Marketing - Agencia de marketing digital especializada en Google Ads">
       <div className="flex flex-col items-center gap-2">
 <Logo size="hero" />
           <h1 className="text-3xl md:text-4xl lg:text-4xl font-bold tracking-tight text-balance max-w-4xl leading-[1.3]">

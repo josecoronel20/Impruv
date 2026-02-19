@@ -26,8 +26,7 @@ const solutions = [
 export function SolutionSection() {
 
   return (
-    <ParallaxSection image="/images/bgSections/Home-solutions-section.png">
-      <ScrollReveal direction="up" delay={0}>
+    <ParallaxSection image="/images/bgSections/Home-solutions-section.png" alt="Sección de soluciones de marketing digital - Sistema integrado para atraer clientes adecuados">
         <div className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-balance mb-6 leading-[1.3] ">
               Un sistema pensado para <span className="text-primary">atraer a los clientes adecuados</span> y <span className="text-primary">medir resultados</span>
@@ -40,6 +39,7 @@ export function SolutionSection() {
             </p>
           </div>
 
+      <ScrollReveal direction="up" delay={0}>
           <div className="grid md:grid-cols-3 gap-6">
             {solutions.map((solution, index) => (
               <div

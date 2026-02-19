@@ -5,17 +5,65 @@ import { ServiceProcess } from "@/components/services-sections/service-process"
 import { ServiceIntegration } from "@/components/services-sections/service-integration"
 import { FileText, Users, Layout, LineChart } from "lucide-react"
 
-export const metadata = {
+import type { Metadata } from "next"
+import { ProfessionalServiceSchema } from "@/components/common/SchemaMarkup"
+
+export const metadata: Metadata = {
   title: "Diseño Web Orientado a Conversión | impruv Marketing",
   description:
     "Sitios web diseñados para convertir visitas en consultas comerciales. No solo se ven bien, guían al usuario hasta la acción.",
+  keywords: [
+    "diseño web",
+    "diseño web conversión",
+    "sitios web",
+    "desarrollo web",
+    "landing pages",
+    "diseño web Argentina",
+    "sitio web profesional",
+  ],
+  alternates: {
+    canonical: "/diseno-web",
+  },
+  openGraph: {
+    title: "Diseño Web Orientado a Conversión | impruv Marketing",
+    description:
+      "Sitios web diseñados para convertir visitas en consultas comerciales. No solo se ven bien, guían al usuario hasta la acción.",
+    url: "https://impruv.com/diseno-web",
+    siteName: "impruv Marketing",
+    locale: "es_AR",
+    type: "website",
+    images: [
+      {
+        url: "https://impruv.com/images/og-diseno-web.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Diseño Web Orientado a Conversión - impruv Marketing",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Diseño Web Orientado a Conversión | impruv Marketing",
+    description: "Sitios web diseñados para convertir visitas en consultas comerciales.",
+    images: ["https://impruv.com/images/og-diseno-web.jpg"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 }
 
 export default function WebDesignPage() {
   return (
-    <main className="min-h-screen">
+    <>
+      <ProfessionalServiceSchema
+        serviceType="Diseño Web"
+        description="Sitios web diseñados para convertir visitas en consultas comerciales. No solo se ven bien, guían al usuario hasta la acción."
+      />
+      <main className="min-h-screen">
       <ServiceHero
         backgroundImage="/images/bgSections/website-hero.jpg"
+        alt="Hero section de diseño web orientado a conversión"
         title={
           <>
             Diseño web orientado a <span className="text-primary">conversión</span>, no solo a estética
@@ -38,7 +86,8 @@ export default function WebDesignPage() {
         }
       />
       <ServiceSolution
-        backgroundImage="/images/bgSections/home-hero.png"
+        backgroundImage="/images/bgSections/Home-hero.png"
+        alt="Solución de diseño web como herramienta comercial"
         title="Un sitio web pensado como herramienta comercial"
         description={
           <>
@@ -79,12 +128,14 @@ export default function WebDesignPage() {
         ]}
       />
       <ServiceIntegration
-        backgroundImage="/images/bgSections/servicios-hero-section.jpg"
+        backgroundImage="/images/bgSections/Servicios-hero-section.jpg"
+        alt="Integración de diseño web con Google Ads"
         title="Un sitio sin tráfico calificado es solo una herramienta sin uso"
         description="El diseño web cobra sentido cuando se integra con una estrategia de captación. Google Ads permite atraer usuarios con intención real, y el sitio convierte ese interés en oportunidades comerciales."
         ctaText="Ver Google Ads"
         ctaHref="/google-ads"
       />
     </main>
+    </>
   )
 }
