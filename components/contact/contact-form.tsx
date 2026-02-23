@@ -1,55 +1,36 @@
 "use client"
 
 import * as React from "react"
+import { useForm } from "@formspree/react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
 export function ContactForm() {
-  const [budget, setBudget] = React.useState<string | undefined>(undefined)
-  const [status, setStatus] = React.useState<"idle" | "loading" | "success" | "error">("idle")
-  const [error, setError] = React.useState<string | null>(null)
+  const [state, handleSubmit] = useForm("mrealarl")
+  const [budget, setBudget] = React.useState<string>("")
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
-    e.preventDefault()
-
-    if (status === "loading") return
-
-    setStatus("loading")
-    setError(null)
-
-    const form = e.currentTarget
-    const formData = new FormData(form)
-
-    try {
-      const res = await fetch("https://formspree.io/f/mrealarl", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-        },
-        body: formData,
-      })
-
-      if (!res.ok) {
-        const data = (await res.json().catch(() => null)) as
-          | { errors?: Array<{ message?: string }> }
-          | null
-
-        const msg = data?.errors?.[0]?.message ?? "No se pudo enviar el formulario. Probá de nuevo en unos minutos."
-        setError(msg)
-        setStatus("error")
-        return
-      }
-
-      form.reset()
-      setBudget(undefined)
-      setStatus("success")
-    } catch {
-      setError("No se pudo enviar el formulario. Revisá tu conexión e intentá nuevamente.")
-      setStatus("error")
-    }
+  if (state.succeeded) {
+    return (
+      <section className="px-6 py-32 md:py-40">
+        <div className="max-w-2xl mx-auto text-center">
+          <h1 className="text-3xl md:text-4xl font-medium mb-6 text-neutral-900 text-balance">
+            Gracias por tu mensaje
+          </h1>
+          <p className="text-base text-neutral-600 text-pretty leading-[1.75]">
+            Te vamos a contactar a la brevedad.
+          </p>
+        </div>
+      </section>
+    )
   }
 
   return (
@@ -65,8 +46,6 @@ export function ContactForm() {
             Este formulario breve nos permite entender tu situación y evaluar si nuestro enfoque de performance es
             adecuado para tu empresa.
           </p>
-
-         
         </div>
 
         {/* Form */}
@@ -90,7 +69,7 @@ export function ContactForm() {
           {/* Email */}
           <div className="space-y-3">
             <Label htmlFor="email" className="text-sm font-medium text-primary">
-              Email
+              Email <span className="text-red-500">*</span>
             </Label>
             <Input
               id="email"
@@ -98,6 +77,7 @@ export function ContactForm() {
               type="email"
               placeholder="Email de trabajo"
               autoComplete="email"
+              required
               className="h-12 rounded-2xl border-neutral-300 focus:border-neutral-400 focus:ring-neutral-400"
             />
           </div>
@@ -144,7 +124,7 @@ export function ContactForm() {
               name="sitio"
               type="text"
               placeholder="https://tusitio.com"
-              autoComplete="website"
+              autoComplete="url"
               className="h-12 rounded-2xl border-neutral-300 focus:border-neutral-400 focus:ring-neutral-400"
             />
             <p className="text-xs text-neutral-500 leading-relaxed">
@@ -152,16 +132,12 @@ export function ContactForm() {
             </p>
           </div>
 
-          
-
-          
-
           {/* Presupuesto */}
           <div className="space-y-3">
             <Label htmlFor="presupuesto" className="text-sm font-medium text-primary">
               Presupuesto mensual estimado <span className="text-red-500">*</span>
             </Label>
-            <input type="hidden" name="presupuesto" value={budget ?? ""} />
+            <input type="hidden" name="presupuesto" value={budget} readOnly />
             <Select value={budget} onValueChange={setBudget} required>
               <SelectTrigger
                 id="presupuesto"
@@ -196,25 +172,18 @@ export function ContactForm() {
           <div className="pt-4">
             <Button
               type="submit"
-              disabled={status === "loading"}
-              className="w-full h-12 rounded-full bg-gradient-to-r from-[#2B2B2B] to-[#1E73BE] hover:bg-primary/90 text-white text-sm font-medium"
+              disabled={state.submitting}
+              className="w-full h-12 rounded-full bg-gradient-to-r from-[#2B2B2B] to-[#1E73BE] hover:opacity-90 text-white text-sm font-medium"
             >
-              {status === "loading" ? "Enviando..." : "Solicitar diagnóstico"}
+              {state.submitting ? "Enviando..." : "Solicitar diagnóstico"}
             </Button>
           </div>
 
-          {status === "success" && (
-            <p className="text-sm text-green-700" role="status" aria-live="polite">
-              ¡Listo! Recibimos tu mensaje. Te vamos a contactar a la brevedad.
-            </p>
-          )}
-
-          {status === "error" && (
+          {state.errors && (
             <p className="text-sm text-red-700" role="alert">
-              {error}
+              No se pudo enviar. Revisá los datos e intentá de nuevo.
             </p>
           )}
-         
         </form>
       </div>
     </section>
