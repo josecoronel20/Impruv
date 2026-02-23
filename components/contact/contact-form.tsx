@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { useForm } from "@formspree/react"
+import { useForm, ValidationError } from "@formspree/react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
@@ -80,6 +80,7 @@ export function ContactForm() {
               required
               className="h-12 rounded-2xl border-neutral-300 focus:border-neutral-400 focus:ring-neutral-400"
             />
+            <ValidationError prefix="Email" field="email" errors={state.errors} />
           </div>
 
           {/* Teléfono */}
@@ -166,6 +167,7 @@ export function ContactForm() {
               rows={5}
               className="rounded-2xl border-neutral-300 focus:border-neutral-400 focus:ring-neutral-400 resize-none"
             />
+            <ValidationError prefix="Contexto" field="contexto" errors={state.errors} />
           </div>
 
           {/* Submit button */}

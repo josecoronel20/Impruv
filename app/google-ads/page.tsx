@@ -9,7 +9,7 @@ import type { Metadata } from "next"
 import { ProfessionalServiceSchema } from "@/components/common/SchemaMarkup"
 
 export const metadata: Metadata = {
-  title: "Google Ads Orientado a Calidad | impruv Marketing",
+  title: "Google Ads Orientado a Calidad | impruv",
   description:
     "Servicio de Google Ads enfocado en generar consultas de calidad. Diseñamos estrategias para conectarte con tus clientes ideales.",
   keywords: [
@@ -26,27 +26,27 @@ export const metadata: Metadata = {
     canonical: "/google-ads",
   },
   openGraph: {
-    title: "Google Ads Orientado a Calidad | impruv Marketing",
+    title: "Google Ads Orientado a Calidad | impruv",
     description:
       "Servicio de Google Ads enfocado en generar consultas de calidad. Diseñamos estrategias para conectarte con tus clientes ideales.",
-    url: "https://impruv.com/google-ads",
-    siteName: "impruv Marketing",
+    url: "https://impruvagencia.com/google-ads",
+    siteName: "impruv",
     locale: "es_AR",
     type: "website",
     images: [
       {
-        url: "https://impruv.com/images/og-google-ads.jpg",
+        url: "https://impruvagencia.com/images/og-google-ads.jpg",
         width: 1200,
         height: 630,
-        alt: "Google Ads Orientado a Calidad - impruv Marketing",
+        alt: "Google Ads Orientado a Calidad - impruv",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Google Ads Orientado a Calidad | impruv Marketing",
+    title: "Google Ads Orientado a Calidad | impruv",
     description: "Servicio de Google Ads enfocado en generar consultas de calidad.",
-    images: ["https://impruv.com/images/og-google-ads.jpg"],
+    images: ["https://impruvagencia.com/images/og-google-ads.jpg"],
   },
   robots: {
     index: true,

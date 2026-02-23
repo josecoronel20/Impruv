@@ -1,25 +1,25 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Términos y Condiciones | impruv Marketing",
+  title: "Términos y Condiciones | impruv",
   description:
-    "Términos y condiciones de uso de los servicios de impruv Marketing. Lee nuestros términos antes de utilizar nuestros servicios.",
+    "Términos y condiciones de uso de los servicios de impruv. Lee nuestros términos antes de utilizar nuestros servicios.",
   alternates: {
     canonical: "/terminos-y-condiciones",
   },
   openGraph: {
-    title: "Términos y Condiciones | impruv Marketing",
+    title: "Términos y Condiciones | impruv",
     description:
-      "Términos y condiciones de uso de los servicios de impruv Marketing. Lee nuestros términos antes de utilizar nuestros servicios.",
-    url: "https://impruv.com/terminos-y-condiciones",
-    siteName: "impruv Marketing",
+      "Términos y condiciones de uso de los servicios de impruv. Lee nuestros términos antes de utilizar nuestros servicios.",
+    url: "https://impruvagencia.com/terminos-y-condiciones",
+    siteName: "impruv",
     locale: "es_AR",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Términos y Condiciones | impruv Marketing",
-    description: "Términos y condiciones de uso de los servicios de impruv Marketing.",
+    title: "Términos y Condiciones | impruv",
+    description: "Términos y condiciones de uso de los servicios de impruv.",
   },
   robots: {
     index: true,
@@ -63,7 +63,7 @@ export default function TerminosYCondicionesPage() {
             <section>
               <h2 className="text-2xl md:text-3xl font-bold mb-4">2. Descripción del Servicio</h2>
               <p className="text-base text-foreground leading-[1.75] mb-4">
-                impruv Marketing es una agencia de marketing digital que ofrece los siguientes servicios:
+                impruv es una agencia de marketing digital que ofrece los siguientes servicios:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-base text-foreground leading-[1.75]">
                 <li>Diseño y desarrollo de sitios web orientados a conversión</li>
@@ -147,7 +147,7 @@ export default function TerminosYCondicionesPage() {
               <h3 className="text-xl font-semibold mb-3">6.1. Contenido del Sitio</h3>
               <p className="text-base text-foreground leading-[1.75] mb-4">
                 Todo el contenido del sitio web, incluyendo pero no limitado a textos, gráficos, logos, imágenes,
-                software y código, es propiedad de impruv Marketing o sus licenciantes y está protegido por leyes de
+                software y código, es propiedad de impruv o sus licenciantes y está protegido por leyes de
                 propiedad intelectual.
               </p>
 
@@ -263,7 +263,7 @@ export default function TerminosYCondicionesPage() {
             <section>
               <h2 className="text-2xl md:text-3xl font-bold mb-4">12. Indemnización</h2>
               <p className="text-base text-foreground leading-[1.75]">
-                Aceptas indemnizar y eximir de responsabilidad a impruv Marketing, sus afiliados, directores, empleados y
+                Aceptas indemnizar y eximir de responsabilidad a impruv, sus afiliados, directores, empleados y
                 agentes de cualquier reclamo, daño, obligación, pérdida, responsabilidad, costo o deuda, y gastos
                 (incluyendo honorarios legales) que surjan de tu uso de nuestros servicios, violación de estos términos,
                 o violación de cualquier derecho de terceros.
@@ -284,7 +284,7 @@ export default function TerminosYCondicionesPage() {
               <h3 className="text-xl font-semibold mb-3">14.1. Acuerdo Completo</h3>
               <p className="text-base text-foreground leading-[1.75] mb-4">
                 Estos términos, junto con nuestra Política de Privacidad y cualquier contrato específico de servicios,
-                constituyen el acuerdo completo entre tú y impruv Marketing respecto al uso de nuestros servicios.
+                constituyen el acuerdo completo entre tú y impruv respecto al uso de nuestros servicios.
               </p>
 
               <h3 className="text-xl font-semibold mb-3 mt-6">14.2. Divisibilidad</h3>
@@ -307,7 +307,7 @@ export default function TerminosYCondicionesPage() {
               </p>
               <div className="bg-muted/30 rounded-2xl p-6 border border-border">
                 <p className="text-base text-foreground leading-[1.75] mb-2">
-                  <strong>impruv Marketing</strong>
+                  <strong>impruv</strong>
                 </p>
                 <p className="text-base text-foreground leading-[1.75] mb-2">
                   Email:{" "}

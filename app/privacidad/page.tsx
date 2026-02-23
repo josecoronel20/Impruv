@@ -1,25 +1,25 @@
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: "Política de Privacidad | impruv Marketing",
+  title: "Política de Privacidad | impruv",
   description:
-    "Política de privacidad de impruv Marketing. Información sobre cómo recopilamos, usamos y protegemos tus datos personales.",
+    "Política de privacidad de impruv. Información sobre cómo recopilamos, usamos y protegemos tus datos personales.",
   alternates: {
     canonical: "/privacidad",
   },
   openGraph: {
-    title: "Política de Privacidad | impruv Marketing",
+    title: "Política de Privacidad | impruv",
     description:
-      "Política de privacidad de impruv Marketing. Información sobre cómo recopilamos, usamos y protegemos tus datos personales.",
-    url: "https://impruv.com/privacidad",
-    siteName: "impruv Marketing",
+      "Política de privacidad de impruv. Información sobre cómo recopilamos, usamos y protegemos tus datos personales.",
+    url: "https://impruvagencia.com/privacidad",
+    siteName: "impruv",
     locale: "es_AR",
     type: "website",
   },
   twitter: {
     card: "summary",
-    title: "Política de Privacidad | impruv Marketing",
-    description: "Política de privacidad de impruv Marketing.",
+    title: "Política de Privacidad | impruv",
+    description: "Política de privacidad de impruv.",
   },
   robots: {
     index: true,
@@ -49,7 +49,7 @@ export default function PrivacidadPage() {
             <section>
               <h2 className="text-2xl md:text-3xl font-bold mb-4">1. Introducción</h2>
               <p className="text-base text-foreground leading-[1.75] mb-4">
-                En impruv Marketing ("nosotros", "nuestro" o "la empresa"), nos comprometemos a proteger tu privacidad.
+                En impruv ("nosotros", "nuestro" o "la empresa"), nos comprometemos a proteger tu privacidad.
                 Esta Política de Privacidad explica cómo recopilamos, usamos, divulgamos y protegemos tu información
                 personal cuando utilizas nuestro sitio web y servicios.
               </p>
@@ -229,15 +229,15 @@ export default function PrivacidadPage() {
               </p>
               <div className="bg-muted/30 rounded-2xl p-6 border border-border">
                 <p className="text-base text-foreground leading-[1.75] mb-2">
-                  <strong>impruv Marketing</strong>
+                  <strong>impruv</strong>
                 </p>
                 <p className="text-base text-foreground leading-[1.75] mb-2">
                   Email:{" "}
                   <a
-                    href="mailto:contacto@impruv.com"
+                    href="mailto:contacto@impruvagencia.com"
                     className="text-primary hover:underline"
                   >
-                    contacto@impruv.com
+                    contacto@impruvagencia.com
                   </a>
                 </p>
                 <p className="text-base text-foreground leading-[1.75]">

@@ -9,7 +9,7 @@ import type { Metadata } from "next"
 import { ProfessionalServiceSchema } from "@/components/common/SchemaMarkup"
 
 export const metadata: Metadata = {
-  title: "Diseño Web Orientado a Conversión | impruv Marketing",
+  title: "Diseño Web Orientado a Conversión | impruv",
   description:
     "Sitios web diseñados para convertir visitas en consultas comerciales. No solo se ven bien, guían al usuario hasta la acción.",
   keywords: [
@@ -25,27 +25,27 @@ export const metadata: Metadata = {
     canonical: "/diseno-web",
   },
   openGraph: {
-    title: "Diseño Web Orientado a Conversión | impruv Marketing",
+    title: "Diseño Web Orientado a Conversión | impruv",
     description:
       "Sitios web diseñados para convertir visitas en consultas comerciales. No solo se ven bien, guían al usuario hasta la acción.",
-    url: "https://impruv.com/diseno-web",
-    siteName: "impruv Marketing",
+    url: "https://impruvagencia.com/diseno-web",
+    siteName: "impruv",
     locale: "es_AR",
     type: "website",
     images: [
       {
-        url: "https://impruv.com/images/og-diseno-web.jpg",
+        url: "https://impruvagencia.com/images/og-diseno-web.jpg",
         width: 1200,
         height: 630,
-        alt: "Diseño Web Orientado a Conversión - impruv Marketing",
+        alt: "Diseño Web Orientado a Conversión - impruv",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Diseño Web Orientado a Conversión | impruv Marketing",
+    title: "Diseño Web Orientado a Conversión | impruv",
     description: "Sitios web diseñados para convertir visitas en consultas comerciales.",
-    images: ["https://impruv.com/images/og-diseno-web.jpg"],
+    images: ["https://impruvagencia.com/images/og-diseno-web.jpg"],
   },
   robots: {
     index: true,
