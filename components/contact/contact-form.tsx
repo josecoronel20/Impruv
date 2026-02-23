@@ -13,21 +13,50 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
+import Link from "next/link"
 
 export function ContactForm() {
   const [state, handleSubmit] = useForm("mojnpnqo")
-  const [budget, setBudget] = React.useState<string>("")
+  const [budget, setBudget] = React.useState<number>(100000)
 
+  React.useEffect(() => {
+    if (state.succeeded) {
+      window.scrollTo(0, 0)
+    }
+  }, [state.succeeded])
+  
   if (state.succeeded) {
     return (
-      <section className="px-6 py-32 md:py-40">
-        <div className="max-w-2xl mx-auto text-center">
-          <h1 className="text-3xl md:text-4xl font-medium mb-6 text-neutral-900 text-balance">
-            Gracias por tu mensaje
+      <section className="px-6 py-32 md:py-40 bg-gradient-to-b from-primary/10 via-white to-white">
+        <div className="max-w-2xl mx-auto flex flex-col items-center rounded-3xl bg-white/90 shadow-lg p-8 md:p-16 border border-neutral-100">
+          <div className="flex items-center justify-center w-16 h-16 rounded-full bg-primary/10 mb-6">
+            <svg
+              width={36}
+              height={36}
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={1.5}
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="text-primary"
+            >
+              <path d="M21 10.5V6a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h6.5" />
+              <path d="m21 6-8.7 5.8a2 2 0 0 1-2.19 0L3 6" />
+              <path d="M17 17v5" />
+              <path d="M21 21v-5" />
+              <rect x="15" y="17" width="6" height="4" rx="1" />
+            </svg>
+          </div>
+          <h1 className="text-3xl md:text-4xl font-semibold mb-4 text-neutral-900 text-balance">
+            ¡Gracias por tu mensaje!
           </h1>
-          <p className="text-base text-neutral-600 text-pretty leading-[1.75]">
-            Te vamos a contactar a la brevedad.
+          <p className="text-base md:text-lg text-neutral-700 text-pretty leading-relaxed mb-6">
+            Recibimos tu consulta, te vamos a contactar a la brevedad para darte una respuesta personalizada.
           </p>
+          <Link href="/" className="inline-block text-blue-700 font-medium rounded-full px-6 py-2 bg-primary/10 hover:bg-primary/20 transition">
+            Volver al inicio
+          </Link>
         </div>
       </section>
     )
@@ -138,21 +167,27 @@ export function ContactForm() {
             <Label htmlFor="presupuesto" className="text-sm font-medium text-primary">
               Presupuesto mensual estimado <span className="text-red-500">*</span>
             </Label>
+            <input
+              type="range"
+              id="presupuesto"
+              name="presupuesto"
+              min={100000}
+              max={1500000}
+              step={10000}
+              value={budget}
+              onChange={e => setBudget(Number(e.target.value))}
+              required
+              className="w-full accent-primary"
+            />
+            <div className="flex justify-between text-xs text-neutral-500 mt-1">
+              <span>$100.000 ARS</span>
+              <span>$1.500.000 ARS</span>
+            </div>
+            <div className="mt-1 text-base text-primary font-medium">
+              Seleccionado: <span className="font-bold">${Number(budget).toLocaleString("es-AR")} ARS</span>
+            </div>
+            {/* Campo oculto para enviar el valor seleccionado */}
             <input type="hidden" name="presupuesto" value={budget} readOnly />
-            <Select value={budget} onValueChange={setBudget} required>
-              <SelectTrigger
-                id="presupuesto"
-                className="h-12 rounded-2xl border-neutral-300 focus:border-neutral-400 focus:ring-neutral-400"
-              >
-                <SelectValue placeholder="Seleccioná una opción" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="bajo">Menos de $200USD</SelectItem>
-                <SelectItem value="medio">$200USD – $500USD</SelectItem>
-                <SelectItem value="alto">$500USD – $1000USD</SelectItem>
-                <SelectItem value="definir">A definir</SelectItem>
-              </SelectContent>
-            </Select>
           </div>
 
           {/* Contexto adicional */}
