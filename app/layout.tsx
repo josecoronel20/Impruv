@@ -12,7 +12,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://impruv.com"),
+  metadataBase: new URL("https://impruvagencia.com"),
   title: {
     default: "impruv - Agencia de Marketing Digital | Google Ads y Diseño Web",
     template: "%s | impruv Marketing",
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     "performance marketing",
     "marketing B2B",
   ],
-  authors: [{ name: "impruv Marketing" }],
-  creator: "impruv Marketing",
-  publisher: "impruv Marketing",
+  authors: [{ name: "impruv Agencia" }],
+  creator: "impruv Agencia",
+  publisher: "impruv Agencia",
   formatDetection: {
     email: false,
     address: false,
@@ -38,17 +38,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "es_AR",
-    url: "https://impruv.com",
-    siteName: "impruv Marketing",
+    url: "https://impruvagencia.com",
+    siteName: "impruv Agencia",
     title: "impruv - Agencia de Marketing Digital | Google Ads y Diseño Web",
     description:
       "Agencia de Marketing Digital especializada en Google Ads y diseño web orientado a conversión. Generamos clientes calificados mediante estrategias de performance marketing B2B.",
     images: [
       {
-        url: "https://impruv.com/images/og-image.jpg",
+        url: "https://impruvagencia.com/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "impruv Marketing - Agencia de Marketing Digital",
+        alt: "impruv Agencia - Agencia de Marketing Digital",
       },
     ],
   },
@@ -57,10 +57,10 @@ export const metadata: Metadata = {
     title: "impruv - Agencia de Marketing Digital | Google Ads y Diseño Web",
     description:
       "Agencia de Marketing Digital especializada en Google Ads y diseño web orientado a conversión. Generamos clientes calificados mediante estrategias de performance marketing B2B.",
-    images: ["https://impruv.com/images/og-image.jpg"],
+    images: ["https://impruvagencia.com/images/og-image.jpg"],
   },
   alternates: {
-    canonical: "https://impruv.com",
+    canonical: "https://impruvagencia.com",
   },
   robots: {
     index: true,

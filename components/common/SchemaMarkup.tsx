@@ -18,9 +18,9 @@ export function OrganizationSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "impruv Marketing",
-    url: "https://impruv.com",
-    logo: "https://impruv.com/images/logo.png",
+    name: "impruv",
+    url: "https://impruvagencia.com",
+    logo: "https://impruvagencia.com/images/logo.png",
     description:
       "Agencia de Marketing Digital especializada en Google Ads y diseño web orientado a conversión.",
     address: {
@@ -55,12 +55,12 @@ export function ProfessionalServiceSchema({
   const schema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: `impruv Marketing - ${serviceType}`,
+    name: `impruv - ${serviceType}`,
     description,
     provider: {
       "@type": "Organization",
-      name: "impruv Marketing",
-      url: "https://impruv.com",
+      name: "impruv",
+      url: "https://impruvagencia.com",
     },
     areaServed: {
       "@type": "Country",
@@ -77,13 +77,13 @@ export function WebSiteSchema() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "impruv Marketing",
-    url: "https://impruv.com",
+    name: "impruv",
+    url: "https://impruvagencia.com",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://impruv.com/buscar?q={search_term_string}",
+        urlTemplate: "https://impruvagencia.com/buscar?q={search_term_string}",
       },
       "query-input": "required name=search_term_string",
     },

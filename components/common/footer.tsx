@@ -44,7 +44,7 @@ export function Footer() {
 
         <div className="mt-12 pt-8 border-t border-border/40">
           <p className="text-sm text-muted-foreground text-center">
-            © {new Date().getFullYear()} impruv Marketing. Todos los derechos reservados.
+            © {new Date().getFullYear()} impruv Agencia. Todos los derechos reservados.
           </p>
         </div>
       </div>
