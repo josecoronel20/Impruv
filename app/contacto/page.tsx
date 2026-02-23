@@ -2,9 +2,9 @@ import type { Metadata } from "next"
 import { ContactForm } from "@/components/contact/contact-form"
 
 export const metadata: Metadata = {
-  title: "Contacto | impruv Marketing - Solicita tu Diagnóstico Gratuito",
+  title: "Contacto | impruv - Solicita tu Diagnóstico Gratuito",
   description:
-    "Contacta con impruv Marketing. Solicita un diagnóstico gratuito para tu negocio y descubre cómo podemos ayudarte a generar más clientes calificados con Google Ads y diseño web.",
+    "Contacta con impruv. Solicita un diagnóstico gratuito para tu negocio y descubre cómo podemos ayudarte a generar más clientes calificados con Google Ads y diseño web.",
   keywords: [
     "contacto marketing digital",
     "consulta marketing",
@@ -16,27 +16,27 @@ export const metadata: Metadata = {
     canonical: "/contacto",
   },
   openGraph: {
-    title: "Contacto | impruv Marketing - Solicita tu Diagnóstico Gratuito",
+    title: "Contacto | impruv - Solicita tu Diagnóstico Gratuito",
     description:
       "Solicita un diagnóstico gratuito para tu negocio y descubre cómo podemos ayudarte a generar más clientes calificados con Google Ads y diseño web.",
-    url: "https://impruv.com/contacto",
-    siteName: "impruv Marketing",
+    url: "https://impruvagencia.com/contacto",
+    siteName: "impruv",
     locale: "es_AR",
     type: "website",
     images: [
       {
-        url: "https://impruv.com/images/og-contacto.jpg",
+        url: "https://impruvagencia.com/images/og-contacto.jpg",
         width: 1200,
         height: 630,
-        alt: "Contacto impruv Marketing",
+        alt: "Contacto impruv",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contacto | impruv Marketing",
+    title: "Contacto | impruv",
     description: "Solicita tu diagnóstico gratuito de marketing digital.",
-    images: ["https://impruv.com/images/og-contacto.jpg"],
+    images: ["https://impruvagencia.com/images/og-contacto.jpg"],
   },
   robots: {
     index: true,
