@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://impruvagencia.com"),
   title: {
     default: "impruv - Agencia de Marketing Digital | Google Ads y Diseño Web",
-    template: "%s | impruv Marketing",
+    template: "%s | impruv",
   },
   description:
     "Agencia de Marketing Digital especializada en Google Ads y diseño web orientado a conversión. Generamos clientes calificados mediante estrategias de performance marketing B2B.",
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
     "performance marketing",
     "marketing B2B",
   ],
-  authors: [{ name: "impruv Agencia" }],
-  creator: "impruv Agencia",
-  publisher: "impruv Agencia",
+  authors: [{ name: "impruv" }],
+  creator: "impruv",
+  publisher: "impruv",
   formatDetection: {
     email: false,
     address: false,
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     type: "website",
     locale: "es_AR",
     url: "https://impruvagencia.com",
-    siteName: "impruv Agencia",
+    siteName: "impruv",
     title: "impruv - Agencia de Marketing Digital | Google Ads y Diseño Web",
     description:
       "Agencia de Marketing Digital especializada en Google Ads y diseño web orientado a conversión. Generamos clientes calificados mediante estrategias de performance marketing B2B.",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
         url: "https://impruvagencia.com/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "impruv Agencia - Agencia de Marketing Digital",
+        alt: "impruv - Agencia de Marketing Digital",
       },
     ],
   },

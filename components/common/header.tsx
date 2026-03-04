@@ -17,8 +17,12 @@ type NavItem = {
   label: string;
 };
 
-const navigationItems: NavItem[] = [{ href: "/", label: "Inicio" },{ href: "/diseno-web", label: "Diseño Web" },
-  { href: "/google-ads", label: "Google Ads" }];
+const navigationItems: NavItem[] = [
+  { href: "/", label: "Inicio" },
+  { href: "/diseno-web", label: "Diseño Web" },
+  { href: "/google-ads", label: "Google Ads" },
+  { href: "/casos-de-exito", label: "Casos de Éxito" },
+];
 
 
 export function Header() {

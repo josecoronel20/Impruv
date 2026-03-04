@@ -6,6 +6,7 @@ export function Footer() {
     {label: "Inicio", href: "/"},
     {label: "Google Ads", href: "/google-ads"},
     {label: "Diseño Web", href: "/diseno-web"},
+    {label: "Casos de Éxito", href: "/casos-de-exito"},
     {label: "Contacto", href: "/contacto"},
   ]
 
