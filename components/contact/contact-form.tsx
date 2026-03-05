@@ -24,12 +24,13 @@ export function ContactForm() {
       window.scrollTo(0, 0)
       // Google Ads conversion: Enviar formulario de clientes potenciales
       const gtag = (window as Window & { gtag?: (...args: unknown[]) => void }).gtag
+      // Event snippet for Enviar formulario de clientes potenciales (4) conversion page
       if (typeof gtag === "function") {
         gtag("event", "conversion", {
-          send_to: "AW-17992846651/KJsBCMa-qoMcELua1IND",
+          send_to: "AW-17992846651/PXZXCMC1ooMcELua1IND",
           value: 1.0,
           currency: "ARS",
-        })
+        });
       }
     }
   }, [state.succeeded])
