@@ -1,9 +1,7 @@
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
-import Link from "next/link"
+
 import { ParallaxSection } from "../common/ParallaxSection"
 import { Logo } from "../common/logo"
-import { PrincipalBtn } from "../common/PrincipalBtn"
+import { ContactBtn } from "../common/ContactBtn"
 
 export function HeroSection() {
   return (
@@ -20,7 +18,7 @@ export function HeroSection() {
             visitas.
           </p>
 
-<PrincipalBtn size="xl" href="/contacto" label="Contactanos" />
+<ContactBtn />
     </ParallaxSection>
   )
 }

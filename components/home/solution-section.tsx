@@ -28,12 +28,12 @@ export function SolutionSection() {
   return (
     <ParallaxSection image="/images/bgSections/Home-solutions-section.png" alt="Sección de soluciones de marketing digital - Sistema integrado para atraer clientes adecuados">
         <div className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-balance mb-6 leading-[1.3] ">
-              Un sistema pensado para <span className="text-primary">atraer a los clientes adecuados</span> y <span className="text-primary">medir resultados</span>
+            <h2 className="text-3xl md:text-4xl  tracking-tight text-balance mb-6 leading-[1.3] ">
+              Un sistema pensado para <span className="font-extrabold">atraer a los clientes adecuados</span> y <span className="font-extrabold">medir resultados</span>
             </h2>
             <p className="text-base md:text-lg  text-pretty leading-[1.75]">
               La solución no es invertir más publicidad ni rediseñar el sitio por separado. Es implementar un{" "}
-              <strong className="text-primary">sistema integrado</strong>, donde cada parte cumple un rol claro:
+              <strong className="font-extrabold">sistema integrado</strong>, donde cada parte cumple un rol claro:
               atraer a las personas correctas, transformar visitas en oportunidades de venta y optimizar los resultados
               con datos reales.
             </p>

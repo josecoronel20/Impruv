@@ -2,9 +2,9 @@ import { ArrowRight, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { Button } from "../ui/button";
 
-export function PrincipalBtn({size = "default", href, label}: {size: "default" | "sm" | "lg" | "xl", href: string, label: string}) {
+export function PrincipalBtn({size = "default", href, label, blank = false}: {size: "default" | "sm" | "lg" | "xl", href: string, label: string, blank?: boolean}) {
   return (
-    <Link href={href}>
+    <Link href={href} target={blank ? "_blank" : undefined}>
       <Button size={size} className="group relative hover:scale-105 transition-all duration-300 ease-out shadow-md">
         <span className="inline-block translate-x-3 group-hover:translate-x-1 transition-transform duration-300 ease-out">
           {label}

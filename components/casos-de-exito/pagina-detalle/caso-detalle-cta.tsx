@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { PrincipalBtn } from "@/components/common/PrincipalBtn"
+import { ContactBtn } from "@/components/common/ContactBtn"
 
 export function CasoDetalleCta() {
   return (
@@ -14,7 +14,7 @@ export function CasoDetalleCta() {
           medida.
         </p>
         <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
-          <PrincipalBtn href="/contacto" label="Hablar con impruv" size="lg" />
+          <ContactBtn size="lg" />
           <Button variant="outline" size="lg" asChild>
             <Link href="/casos-de-exito">Ver más casos</Link>
           </Button>

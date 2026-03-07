@@ -1,8 +1,5 @@
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
-import Link from "next/link"
 import { ParallaxSection } from "@/components/common/ParallaxSection"
-import { PrincipalBtn } from "../common/PrincipalBtn"
+import { ContactBtn } from "../common/ContactBtn"
 
 interface ServiceHeroProps {
   backgroundImage: string
@@ -31,7 +28,7 @@ export function ServiceHero({
         {description}
       </p>
 
-      <PrincipalBtn size="xl" href={ctaHref} label={ctaText} />
+      <ContactBtn />
         
     </ParallaxSection>
   )

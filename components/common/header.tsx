@@ -4,12 +4,12 @@ import {
   Sheet,
   SheetContent,
 } from "@/components/ui/sheet";
-import { Menu, X, ChevronDown, ChevronRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Logo } from "./logo";
-import { PrincipalBtn } from "./PrincipalBtn";
+import { ContactBtn } from "./ContactBtn";
 
 // Centralizar datos de navegación
 type NavItem = {
@@ -79,7 +79,7 @@ function DesktopNav({
         ))}
 
 
-        <PrincipalBtn size="default" href="/contacto" label="Contactanos" />
+        <ContactBtn size="lg" />
       </nav>
     </div>
   );
@@ -145,7 +145,7 @@ function MobileNav({
 
             
 <div className="mx-auto">
-            <PrincipalBtn size="default" href="/contacto" label="Contactanos" /></div>
+            <ContactBtn /></div>
           </nav>
         </SheetContent>
       </Sheet>

@@ -1,7 +1,7 @@
 import { CheckCircle2 } from "lucide-react"
 import { ParallaxSection } from "../common/ParallaxSection"
-import { PrincipalBtn } from "../common/PrincipalBtn"
 import { ScrollReveal } from "../common/ScrollReveal"
+import { ContactBtn } from "../common/ContactBtn"
 
 export function CtaSection() {
 
@@ -9,7 +9,7 @@ export function CtaSection() {
     <ParallaxSection image="/images/bgSections/Home-cta-section.png" alt="Call to action - Solicitar diagnóstico gratuito de marketing digital">
 
         <ScrollReveal direction="up" delay={0}>
-        <div className="relative overflow-hidden rounded-3xl bg-card border border-border p-12 md:p-16">
+        <div className="relative overflow-hidden rounded-3xl bg-card border border-border py-12 px-8 md:py-16 md:px-12">
           <div className="relative flex flex-col items-center text-center gap-12">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-balance leading-[1.3] text-primary">
               Analicemos si este enfoque es viable para tu negocio
@@ -29,7 +29,8 @@ export function CtaSection() {
               ))}
             </div>
 
-            <PrincipalBtn size="xl" href="/contacto" label="Solicitar diagnóstico" />
+
+            <ContactBtn />
           </div>
         </div>
         </ScrollReveal>
